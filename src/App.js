@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import TodoList from './components/TodoList';
+import { Box, Typography } from '@material-ui/core';
+import img from './pen.png';
+import img2 from './pen2.png';
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div>
+    <img src={img} width='100%'/>
+
+    <div className='todo-app'>
+      <Typography component="div">
+        <Box fontSize='30px' color="white" fontFamily="cursive" letterSpacing={10} m={5}>
+            TASK List:
+        </Box>
+      </Typography>
+      
+      <TodoList />
     </div>
+
+    <img src={img2} width='100%'/>
+
+  </div>
   );
 }
 
 export default App;
+
